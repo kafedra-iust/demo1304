@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tableXY" prefHeight="401.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="xColumn" prefWidth="75.0" text="X" />
+                <TableColumn fx:id="yColumn" prefWidth="75.0" text="Y" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </center>
+   <top>
+       <VBox prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <TextField fx:id="startField" prefHeight="25.0" prefWidth="96.0" promptText="start" />
+            <TextField fx:id="finishField" prefHeight="25.0" prefWidth="96.0" promptText="finish" />
+            <TextField fx:id="stepField" prefHeight="25.0" prefWidth="96.0" promptText="step" />
+               <Button mnemonicParsing="false" onAction="#calculate" text="Посчитать" />
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
